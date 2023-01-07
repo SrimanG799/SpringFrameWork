@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+ 
+  <!-- <bean id="hello" class="com.ciq.bean.HelloWorldBean"></bean> -->
+  
+  
+ <!--  <property name="name" value="javapy"></property>    setter injection-->
+ 
+ <!-- <constructor-arg value="shannnu"></constructor-arg> -->
+ 
+ 
+ 
+ 
+ <!-- 
+ <property name="id" value="001"></property>
+ <property name="name" value="sriman"></property>
+ <property name="salary" value="65000"></property>
+  -->
+ 
+ <bean id="emp" class="com.ciq.bean.Employee">
+ <constructor-arg value="100"></constructor-arg>
+ <constructor-arg value="sriman"></constructor-arg>
+ <constructor-arg value="55050"></constructor-arg>
+ 
+  
+  </bean>
+  
+  <bean id="emp2" class="com.ciq.bean.Employee">
+ <constructor-arg value="101"></constructor-arg>
+ <constructor-arg value="sriram"></constructor-arg>
+ <constructor-arg value="65050"></constructor-arg>
+ 
+  
+  </bean>
+  
+ 
+  
+  <bean id="stu" class="com.ciq.bean.Student">
+ <constructor-arg value="101"></constructor-arg>
+ <constructor-arg value="sriram"></constructor-arg>
+ <constructor-arg value="java"></constructor-arg>
+ 
+  </bean>
+  
+   <bean id="stu2" class="com.ciq.bean.Student">
+ <constructor-arg value="102"></constructor-arg>
+ <constructor-arg value="srikant"></constructor-arg>
+ <constructor-arg value="matlab"></constructor-arg>
+ 
+  </bean>
+   
+</beans>
