@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.dao.StudentDao;
 import com.model.Student;
 @Service
+@EnableTransactionManagement
 public class StudentServiceImpli implements StudentService{
 	@Autowired
 StudentDao studentDao;

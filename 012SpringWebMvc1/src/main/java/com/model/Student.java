@@ -13,12 +13,16 @@ public class Student {
 	//@GeneratedValue(strategy = )
 	@Column(name = "id")
 int sid;
+	
 	@Column(name = "name")
 String sname;
+	
 	@Column(name = "college")
 String scollege;
+	
 	@Column(name = "course")
 String scourse;
+	
 public Student() {
 	// TODO Auto-generated constructor stub
 }
@@ -45,7 +49,7 @@ public void setName(String sname) {
 public String getCollege() {
 	return scollege;
 }
-public void setCollege(String college) {
+public void setCollege(String scollege) {
 	this.scollege = scollege;
 }
 public String getCourse() {

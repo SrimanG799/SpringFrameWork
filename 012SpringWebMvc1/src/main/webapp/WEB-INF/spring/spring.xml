@@ -12,7 +12,9 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<!-- Provide support for component scanning -->
-	<context:component-scan base-package="com.ciq" />
+	<context:component-scan base-package="com." />
+	
+    
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -23,6 +25,47 @@
 
 
 	<!--Provide support for conversion, formatting and validation -->
-	<mvc:annotation-driven />
+<!-- 	<mvc:annotation-driven /> -->
+
+<bean id="datasid" class="org.apache.commons.dbcp.BasicDataSource">
+    
+    <property name="url" value="jdbc:mysql://localhost:3306/springframework"></property>
+    
+    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+    <property name="username" value="root"></property>
+    <property name="password" value="sql799"></property>
+    
+    </bean>
+    
+     <bean id="sessionFactory"
+  class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="datasid" />
+        <property name="packagesToScan" value="com." />
+        <property name="hibernateProperties">
+        
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+           
+        </property>
+         
+    </bean>
+    
+    
+      <bean id="myTransactionManager"
+            class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+    <property name="sessionFactory"  ref="sessionFactory"></property>
+    </bean>
+  
+    
+    
+ 
+
 
 </beans>  
