@@ -1,0 +1,30 @@
+[
+	{
+		"empid": 1,
+		"name": "sriman",
+		"roll": "javadev",
+		"campany": "CIQsoft",
+		"salary": 65000.0
+	},
+	{
+		"empid": 2,
+		"name": "sriman",
+		"roll": "javadev",
+		"campany": "CIQsoft",
+		"salary": 65000.0
+	},
+	{
+		"empid": 3,
+		"name": "sriman",
+		"roll": "javadev",
+		"campany": "CIQsoft",
+		"salary": 65000.0
+	},
+	{
+		"empid": 4,
+		"name": "sriman",
+		"roll": "devops",
+		"campany": "CIQsoft",
+		"salary": 65000.0
+	}
+]
