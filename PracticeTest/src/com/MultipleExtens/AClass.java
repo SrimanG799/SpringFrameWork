@@ -17,6 +17,10 @@ public class AClass {
 		this.a = a;
 		this.b = b;
 	}
+	
+	public bgetdatA(int a,int b)
+	{
+		System.out.println(a*b);
 
 	
 }
